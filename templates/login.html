@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/7ec4e776d1.js"></script>
+</head>
+<body>
+<style>
+form{
+ text-align : center;
+ }
+.div1 {
+ position: relative;
+ text-align: center;
+ background-color: lightgrey;
+ width: 70%;
+ padding: 2%;
+ margin: 1%;
+ z-index: 15;
+ top: 5%;
+ left: 13%;
+}
+.div2{
+     text-align: left;
+     position: relative;
+ background-color: lightgrey;
+ width: 70%;
+ padding: 2%;
+ margin: 1%;
+ z-index: 15;
+ top: 5%;
+ left: 13%;
+}
+ul {
+    list-style-position: inside;
+}
+img{
+    border-radius:50%;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<div class="div1"> <form method = "post" enctype = "multipart/form-data">
+    <h1><font size = "20">Google Image Downloader </font></h1>
+ </br><h1> Select Image Subject: </h1>
+ <input type = "text" name = "subject" />
+ <h1> Enter Number of Images: </h1>
+ <input type = "text" name = "count" />
+ <div id="wrapper">
+ <h1> <label for="yes_no_radio">Do you want to convert images to b/w? </label> </h1>
+ <font size = "4"> <input type = "radio" name = "yes_no" value = "Yes"> Yes </input> </font>
+ <font size = "4"> <input type = "radio" name = "yes_no" value = "No"> No </input> </font>
+ </div>
+ <p> <h1> Enter percentage by which you want to resize the image: </h1> </p>
+ <input type = "text" name = "resize" value = "0"/>
+ <p> <h1> Enter E-Mail: </h1> </p>
+ <input type = "email" name = "email" />
+
+ <p> <input type="submit" value="Send" style="height : 30px; width : 60px; font-size : 12px" /> </p>
+
+
+</form></div>
+<div  class="div1">
+     <h1><font size = "20">Instructions for Use:</font></h1>
+</br><h4>
+<ul left >
+    <li>Enter the keyword realted to the images you want</li>
+    <li>Enter the number of images you want</li>
+    <li>Then select if you want covert images to Grayscale</li>
+    <li>Percentage by which you want to resize the image</li>
+    <li>Enter the E-Mail id</li>
+    <li>You will recieve a mail which will contain a link</li>
+    <li>Click on the link to download the zip file of the processed images </li>
+
+</ul>
+</h4>
+</div>
+<div class="div2"><div class="row">
+<h1 style="text-align:center"><font size = "20">Team</font></h1>
+<div class="column">
+<img src="{{ url_for('static', filename = 'ArshDeepSingh.png') }}" alt="Arsh Deep Singh"  style="width:200px;"><p><h1>Arsh Deep Singh</h1><a href="mailto: sarshdeep89@gmail.com" target="_blank"> <i class="fas fa-envelope fa-2x" style="color:grey"></i></a>
+ <a href = "https://www.linkedin.com/in/arsh-deep-singh-b52791122" target="_blank"><i class="fab fa-linkedin fa-2x" style="color:grey"></i></a>
+</p>
+</div>
+<div class="column">
+<img src="{{ url_for('static', filename = 'AnmolJindal.png') }}" alt="Anmol Jindal" style="width:200px;"><p><h1>Anmol Jindal</h1>
+<a href="mailto: anmoljindal0709@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x" style="color:grey"></i></a>
+ <a href = "https://www.linkedin.com/in/anmol-jindal-045330129" target="_blank"><i class="fab fa-linkedin fa-2x" style="color:grey"></i></a>
+</p>
+</div>
+</div>
+
+</div>
+</body>
+</html>
